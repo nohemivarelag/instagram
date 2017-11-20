@@ -15,14 +15,14 @@
             <% grams.forEach(function(gram) { %>
               <div class="instagram-pic col-sm-3 ">
                 <a href="<%= gram.link%>"target="_blank">
-                  <img src="<%= gram.images.standard_resolution.url %>" class="img responsive"/>
+                  <img src="<%= gram.images.standard_resolution.url %>" class="instagram-picimg"/>
                 </a>
               <div class="instagram-bar">
-                <div class="likes">
+                <div class="instagram-bar-likes">
                   <span class="glyphicon glyphicon-heart"></span>
                   <%= gram.likes.count %>
                 </div>
-              <div class="comments">
+              <div class="instagram-bar-comments">
                 <span class="glyphicon glyphicon-comment"></span>
                 <%= gram.comments.count %>
               </div>

@@ -5,10 +5,13 @@ const ig = require('instagram-node').instagram();
 
 
 // creamos la app con express
-var app = express();
+var app = require('express')();
+var e = require('express');
 
 // especificamos a node la ruta
-app.use(express.static(__dirname + '../public'));
+var path = require('path');
+app.use(e.static(__dirname+'/public'));
+app.use('/public', e.static(__dirname + '/public'));
 
 // especificamos que utilizaremos ejs como motor de vistas
 app.set('view engine', 'ejs');
